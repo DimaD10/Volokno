@@ -39,4 +39,4 @@ productsSlider.forEach((item, i) => {
             },
         }
     });
-})
+});
