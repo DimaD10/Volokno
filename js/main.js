@@ -32,7 +32,7 @@ headerBtnMobileMenu.addEventListener('click', () => {
 		document.body.style.overflow = null;
 
 		header.querySelector('.header__inner').classList.remove('header__inner--active');
-		header.classList.remove('header--active');
+		window.scrollY === 0 && header.classList.remove('header--active');
 		headerMobileMenu.classList.remove('menu--active');
 	}
 	else{
@@ -52,6 +52,17 @@ headerMobileMenuLink.forEach(item => {
 		item.classList.toggle('menu__list-link--active');
 		e.preventDefault();
 	});
+});
+
+window.addEventListener('resize', () => {
+	const headerBtnDisplay = window.getComputedStyle(headerBtnMobileMenu).getPropertyValue('display');
+	if(headerBtnDisplay === 'none' && headerMobileMenu.classList.contains('menu--active')) {
+		document.body.style.overflow = null;
+	}
+	else if(headerBtnDisplay !== 'none' && headerMobileMenu.classList.contains('menu--active')){
+		header.classList.add('header--active');
+		document.body.style.overflow = 'hidden';
+	}
 });
 
 new Swiper('.menu__new-collectionsslider', {
@@ -90,17 +101,30 @@ document.addEventListener('click', (e) => {
 	const modelBasket = e.composedPath().includes(basketModalContent);
 	const btnBasket = e.composedPath().includes(basketBtnOpen);
 
-	if(!modelSearchContent && !btnSearch){
-		searchModal.classList.remove('search--active');
-	}
+	const btnFilter = e.composedPath().includes(document.querySelector('.collections-products__filters-btn'));
+	const modelFilter = e.composedPath().includes(document.querySelector('.model-filter .model-action__box'));
 
-	if(!btnSearch && !btnBasket && !modelSearchContent && !modelBasket && !btnHeaderMenu && !modelHeaderMenu && !headerInnerClick){
+	if(
+		!btnSearch
+		&& !btnBasket
+		&& !modelSearchContent
+		&& !modelBasket
+		&& !btnHeaderMenu
+		&& !modelHeaderMenu
+		&& !headerInnerClick
+		&& !btnFilter
+		&& !modelFilter
+	) {
 		document.body.style.overflow = null;
 
 		window.scrollY === 0 && header.classList.remove('header--active');
 	}
 
-	if(!modelBasket && !btnBasket){
+	if(!modelSearchContent && !btnSearch) {
+		searchModal.classList.remove('search--active');
+	}
+
+	if(!modelBasket && !btnBasket) {
 		basketModal.classList.remove('model-action--active');
 	}
 });
