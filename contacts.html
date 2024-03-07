@@ -434,7 +434,7 @@
 							<div class="model-action__basket-progressbar"><span style="width: 30%;"></span></div>
 						</div>
 						<div class="model-action__basket-products">
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="1">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/1-basket.png" alt="image product">
 								</a>
@@ -455,7 +455,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="2">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/2-basket.png" alt="image product">
 								</a>
@@ -476,7 +476,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="3">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/3-basket.png" alt="image product">
 								</a>
@@ -998,7 +998,10 @@
 										<br>
 										Часы работы: Пн – Пт / 10:00 – 20:00
 									</p>
-									<a class="link link-color-gray contacts__info-linkmap" href="#">Посмотреть на карте</a>
+									<a class="link link-color-gray contacts__info-linkmap" href="https://yandex.ru/maps/-/CDFF6INy" target="_blank">Посмотреть на карте</a>
+									<div class="contacts__info-btnmap">
+										<img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Ad81a55ae948a3a4e037a82dcaf92c803ba8c744ef23797928c7f764a2abf6461&amp;width=320&amp;height=240&amp;lang=ru_RU" alt="" style="border: 0;" />
+									</div>
 								</div>
 								<div class="contacts__info-box contacts__info-boxsocial">
 									<h4 class="contacts__info-title subtitle-3">соцсети</h4>
@@ -1038,6 +1041,19 @@
 				</div>
 			</div>
 		</section>
+		<div class="model model-map">
+			<div class="model__content">
+				<div class="model__content-top">
+					<h5 class="model-action__top-title">Карта</h5>
+					<button class="model-action__top-btnclose model-map__close" type="button">
+						<img class="model-action__top-btncloseicon" src="images/icons/close.svg" alt="icon close">
+					</button>
+				</div>
+				<div class="model__content-map">
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad81a55ae948a3a4e037a82dcaf92c803ba8c744ef23797928c7f764a2abf6461&amp;source=constructor" width="100%" height="700px" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer class="footer">
 		<div class="container">

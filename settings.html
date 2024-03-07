@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Бренд</title>
+	<title>Настройки аккаунта</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -741,7 +741,7 @@
 										</svg>
 									</button>
 								</div>
-								<div class="product-card__top-slider" id="fff">
+								<div class="product-card__top-slider">
 									<div class="swiper-wrapper">
 										<a class="product-card__top-sliderslide swiper-slide" href="#" data-color="#454545">
 											<img class="product-card__top-sliderimg" src="images/content/products/1.png" alt="product image">
@@ -982,7 +982,132 @@
 		</div>
 	</div>
 	<main class="main">
-
+		<section class="top-info top--margin-top top-info--account">
+			<div class="container">
+				<div class="top-info__inner">
+					<div class="top-info__headers">
+						<h1 class="title">аккаунт</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="account-info">
+			<div class="container">
+				<div class="account-info__inner">
+					<p class="account-info__data-text account-info__data-surname">
+						<span class="account-info__data-surnamepc">Александр добролюбов</span>
+						<span class="account-info__data-surnamemobile">Александр д.</span>
+					</p>
+					<div class="account-info__data">
+						<p class="account-info__data-text">+7 920 315 55 47</p>
+						<p class="account-info__data-text account-info__data-text--email">alex.dobro@mail.ru</p>
+					</div>
+					<div class="account-info__links">
+						<a class="account-info__links-link link link--color-black link--active" href="#">выход</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="account account__setting">
+			<div class="container">
+				<div class="account__inner">
+					<aside class="account-menu">
+						<nav class="account-menu__box">
+							<button class="account-menu__box-active" type="button">
+								настройки аккаунта
+								<span></span>
+							</button>
+							<ul class="account-menu__list">
+								<li class="account-menu__list-item">
+									<a class="account-menu__list-link" href="/points.html">
+										бонусные баллы
+										<span>500</span>
+									</a>
+									<a class="account-menu__list-link" href="/orders.html">
+										мои заказы
+										<span>3</span>
+									</a>
+									<a class="account-menu__list-link" href="/favorites.html">
+										избранное
+										<span>5</span>
+									</a>
+									<a class="account-menu__list-link account-menu__list-link--active" href="#">
+										настройки аккаунта
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</aside>
+					<div class="account__content">
+						<h3 class="account__title subtitle-2">настройки аккаунта</h3>
+						<div class="account__setting-item">
+							<h4 class="account__subtitle subtitle-3">информация</h4>
+							<form class="account__form" id="info-form" novalidate>
+								<div class="account__form-box">
+									<p class="account__form-name">имя</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__name" type="text" placeholder="Имя">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate"></p>
+								</div>
+								<div class="account__form-box">
+									<p class="account__form-name">телефон</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__phone" type="tel" placeholder="Телефона">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate"></p>
+								</div>
+								<div class="account__form-box">
+									<p class="account__form-name">email</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__email" type="email" placeholder="Email">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate"></p>
+								</div>
+								<div class="account__form-bottom">
+									<button class="form-button button" disabled type="submit">сохранить</button>
+								</div>
+							</form>
+						</div>
+						<div class="account__setting-item">
+							<h4 class="account__subtitle subtitle-3">смена пароля</h4>
+							<form class="account__form" id="password-form" novalidate>
+								<div class="account__form-box">
+									<p class="account__form-name">текущий пароль</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__current-password" type="password" placeholder="Введите ваш текущий пароль">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate"></p>
+								</div>
+								<div class="account__form-box">
+									<p class="account__form-name">новый пароль</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__new-password" type="password" placeholder="Придумайте новый пароль">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate">Не менее 6 символов</p>
+								</div>
+								<div class="account__form-box">
+									<p class="account__form-name">подтвердите новый пароль</p>
+									<div class="account__form-inputbox">
+										<input class="account__form-input input" id="info-form__check-new-password" type="password" placeholder="Введите новый пароль">
+										<p class="account__form-error"></p>
+									</div>
+									<p class="account__form-validate"></p>
+								</div>
+								<div class="account__form-bottom">
+									<button class="form-button button" disabled type="submit">изменить пароль</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -1099,6 +1224,10 @@
 </div>
 
 <script src="./js/libs/swiper-bundle.min.js" defer></script>
+<script src="./js/libs/imask.js"></script>
+<script src="./js/libs/validate.js"></script>
 <script src="./js/main.js" defer></script>
+<script src="./js/account.js" defer></script>
+<script src="./js/settings.js" defer></script>
 </body>
 </html>

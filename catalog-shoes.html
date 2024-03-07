@@ -434,7 +434,7 @@
 							<div class="model-action__basket-progressbar"><span style="width: 30%;"></span></div>
 						</div>
 						<div class="model-action__basket-products">
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="1">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/1-basket.png" alt="image product">
 								</a>
@@ -455,7 +455,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="2">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/2-basket.png" alt="image product">
 								</a>
@@ -476,7 +476,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="model-action__basket-product">
+							<div class="model-action__basket-product" data-id="3">
 								<a class="model-action__basket-productimgbox" href="#">
 									<img class="model-action__basket-productimg" src="images/content/products/3-basket.png" alt="image product">
 								</a>
@@ -2045,67 +2045,256 @@
 					</div>
 					<div class="model-filter__box">
 						<p class="model-filter__box-title">размер</p>
-						<div class="model-filter__box-grid model-filter__box-grid--5">
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="39" name="size">
-								<span>ru 39</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="39.5" name="size">
-								<span>ru 39.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="40" name="size">
-								<span>ru 40</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="40.5" name="size">
-								<span>ru 40.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="41" name="size">
-								<span>ru 41</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="41.5" name="size">
-								<span>ru 41.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="42" name="size">
-								<span>ru 42</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="42.5" name="size">
-								<span>ru 42.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="43" name="size">
-								<span>ru 43</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="43.5" name="size">
-								<span>ru 43.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="44" name="size">
-								<span>ru 34</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="44.5" name="size">
-								<span>ru 34.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="45" name="size">
-								<span>ru 45</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="45.5" name="size">
-								<span>ru 45.5</span>
-							</label>
-							<label class="model-filter__box-btn">
-								<input type="checkbox" value="46" name="size">
-								<span>ru 46</span>
-							</label>
+						<div class="size-selection size-selection--filter">
+							<p class="size-selection__text">Выберите размер</p>
+							<div class="size-selection__btns model-filter__btns-size">
+								<button class="size-selection__btn link link--color-black link--active" type="button" data-type="ru">RU</button>
+								<button class="size-selection__btn link link--color-black" type="button" data-type="us">US</button>
+								<button class="size-selection__btn link link--color-black" type="button" data-type="uk">UK</button>
+								<button class="size-selection__btn link link--color-black" type="button" data-type="eu">EU</button>
+							</div>
+						</div>
+						<div class="model-filter__box-size">
+							<div class="model-filter__box-grid model-filter__box-grid--5 model-filter__box-size--active" data-type="ru">
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39" name="size">
+									<span>ru 39</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39.5" name="size">
+									<span>ru 39.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40" name="size">
+									<span>ru 40</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40.5" name="size">
+									<span>ru 40.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41" name="size">
+									<span>ru 41</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41.5" name="size">
+									<span>ru 41.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42" name="size">
+									<span>ru 42</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42.5" name="size">
+									<span>ru 42.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43" name="size">
+									<span>ru 43</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43.5" name="size">
+									<span>ru 43.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44" name="size">
+									<span>ru 34</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44.5" name="size">
+									<span>ru 34.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45" name="size">
+									<span>ru 45</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45.5" name="size">
+									<span>ru 45.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="46" name="size">
+									<span>ru 46</span>
+								</label>
+							</div>
+							<div class="model-filter__box-grid model-filter__box-grid--5" data-type="us">
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39" name="us-size">
+									<span>US 7</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39.5" name="size">
+									<span>US 7.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40" name="size">
+									<span>US 8</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40.5" name="size">
+									<span>US 8.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41" name="size">
+									<span>US 9</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41.5" name="size">
+									<span>US 9.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42" name="size">
+									<span>US 10</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42.5" name="size">
+									<span>US 10.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43" name="size">
+									<span>US 11</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43.5" name="size">
+									<span>US 11.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44" name="size">
+									<span>US 12</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44.5" name="size">
+									<span>US 12.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45" name="size">
+									<span>US 13</span>
+								</label>
+							</div>
+							<div class="model-filter__box-grid model-filter__box-grid--5" data-type="uk">
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39" name="size">
+									<span>UK 6</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39.5" name="size">
+									<span>UK 6.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40" name="size">
+									<span>UK 7</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40.5" name="size">
+									<span>UK 7.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41" name="size">
+									<span>UK 8</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41.5" name="size">
+									<span>UK 8.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42" name="size">
+									<span>UK 9</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42.5" name="size">
+									<span>UK 9.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43" name="size">
+									<span>UK 10</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43.5" name="size">
+									<span>UK 10.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44" name="size">
+									<span>UK 11</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44.5" name="size">
+									<span>UK 11.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45" name="size">
+									<span>UK 12</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45.5" name="size">
+									<span>UK 12.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="46" name="size">
+									<span>UK 13</span>
+								</label>
+							</div>
+							<div class="model-filter__box-grid model-filter__box-grid--5" data-type="eu">
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39" name="size">
+									<span>EU 40</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="39.5" name="size">
+									<span>EU 40.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40" name="size">
+									<span>EU 41</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="40.5" name="size">
+									<span>EU 42</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41" name="size">
+									<span>EU 42.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="41.5" name="size">
+									<span>EU 43</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42" name="size">
+									<span>EU 44</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="42.5" name="size">
+									<span>EU 44.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43" name="size">
+									<span>EU 45</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="43.5" name="size">
+									<span>EU 45.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44" name="size">
+									<span>EU 46</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="44.5" name="size">
+									<span>EU 47</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45" name="size">
+									<span>EU 47.5</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="45.5" name="size">
+									<span>EU 47</span>
+								</label>
+								<label class="model-filter__box-btn">
+									<input type="checkbox" value="46" name="size">
+									<span>EU 48</span>
+								</label>
+							</div>
 						</div>
 					</div>
 					<div class="model-filter__box">

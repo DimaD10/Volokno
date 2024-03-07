@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Бренд</title>
+	<title>Вход</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -982,7 +982,79 @@
 		</div>
 	</div>
 	<main class="main">
-
+		<section class="top-info top--margin-top top-info--account">
+			<div class="container">
+				<div class="top-info__inner">
+					<div class="top-info__headers">
+						<h1 class="title">аккаунт</h1>
+					</div>
+					<p class="top-info__text">
+						Войдите или зарегестрируйтесь, чтобы сохранить товары в аккаунте и отслеживать заказы
+					</p>
+				</div>
+			</div>
+		</section>
+		<div class="account-info auth-info">
+			<div class="container">
+				<div class="account-info__inner">
+					<div class="account-info__links">
+						<a class="account-info__links-link link link--color-black link--active" href="/login.html">войти</a>
+						<a class="account-info__links-link link link--color-black" href="/registration.html">регистрация</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="account auth">
+			<div class="container">
+				<div class="account__inner">
+					<aside class="account-menu">
+						<nav class="account-menu__box">
+							<ul class="account-menu__list">
+								<li class="account-menu__list-item">
+									<a class="account-menu__list-link account-menu__list-link--active" href="/login.html">
+										войти
+									</a>
+									<a class="account-menu__list-link" href="/registration.html">
+										регистрация
+									</a>
+									<a class="account-menu__list-link" href="/favorites.html">
+										избранное
+										<span>5</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</aside>
+					<div class="account__content">
+						<h3 class="account__title subtitle-2">вход</h3>
+						<p class="account__text">
+							Пожалуйста, введите ваш email/телефон и пароль
+						</p>
+						<form class="account__form" id="login-form">
+							<div class="account__form-box">
+								<p class="account__form-name">email/телефон</p>
+								<div class="account__form-inputbox">
+									<input class="account__form-input input" id="login-form__email-or-phone" type="text" placeholder="Email / телефон">
+									<p class="account__form-error"></p>
+								</div>
+								<p class="account__form-validate account__form-validate--red">Обязательное поле</p>
+							</div>
+							<div class="account__form-box">
+								<p class="account__form-name">пароль</p>
+								<div class="account__form-inputbox">
+									<input class="account__form-input input" id="login-form__password" type="password" placeholder="Пароль">
+									<p class="account__form-error"></p>
+								</div>
+								<p class="account__form-validate"><a href="#">Забыли пароль?</a></p>
+							</div>
+							<div class="account__form-bottom">
+								<button class="form-button button" type="submit">войти</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -1099,6 +1171,8 @@
 </div>
 
 <script src="./js/libs/swiper-bundle.min.js" defer></script>
+<script src="./js/libs/validate.js" defer></script>
 <script src="./js/main.js" defer></script>
+<script src="./js/login.js" defer></script>
 </body>
 </html>
